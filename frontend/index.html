@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL CODERS - Services Informatiques Professionnels</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="ALL CODERS - Services informatiques professionnels, développement d'applications, réseaux et cybersécurité">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">ALL CODERS</div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="cta-button">Démarrer un projet</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="particles"></div>
+        <div class="hero-content">
+            <h1 class="glowing-text">ALL CODERS</h1>
+            <div class="typing-container">
+                <p class="typing-text">Transformons vos idées en réalité numérique</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="#services" class="cta-button primary">Découvrir nos services</a>
+                <a href="#contact" class="cta-button secondary">Démarrer un projet</a>
+            </div>
+        </div>
+        <div class="floating-elements"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Développement d'Applications</h3>
+                <p>Applications web et mobiles sur mesure</p>
+                <ul class="service-details">
+                    <li>Sites web responsifs</li>
+                    <li>Applications mobiles natives</li>
+                    <li>Solutions e-commerce</li>
+                    <li>APIs et microservices</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Réseaux Informatiques</h3>
+                <p>Infrastructure et sécurité réseau</p>
+                <ul class="service-details">
+                    <li>Configuration réseau</li>
+                    <li>Solutions cloud</li>
+                    <li>VPN sécurisés</li>
+                    <li>Maintenance préventive</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cybersécurité</h3>
+                <p>Protection et audit de sécurité</p>
+                <ul class="service-details">
+                    <li>Tests de pénétration</li>
+                    <li>Audit de sécurité</li>
+                    <li>Formation sécurité</li>
+                    <li>Surveillance 24/7</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2 class="section-title">À Propos de Nous</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="gradient-text">Notre Vision</h3>
+                    <p>Chez ALL CODERS, nous transformons les défis numériques en opportunités. Notre équipe d'experts passionnés combine créativité et expertise technique pour donner vie à vos projets.</p>
+                    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="65">0</span>
+                            <span class="stat-label">Projets Réalisés</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="62">0</span>
+                            <span class="stat-label">Clients Satisfaits</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Années d'Expérience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-stack">
+                    <h3 class="gradient-text">Notre Stack Technologique</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item" data-tech="React">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item" data-tech="Node.js">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item" data-tech="Python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item" data-tech="AWS">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-item" data-tech="C#">
+                            <i class="fas fa-code"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="tech-item" data-tech="Flutter">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title">Nos Réalisations</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-content">
+                    <img src="images/ecommerce-app.jpg" alt="Application E-commerce" class="lazy-load" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Application E-commerce</h3>
+                        <p>Développement Full Stack avec .NET Core et React</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>React</span>
+                            <span>SQL</span>
+                        </div>
+                        <a href="#" class="portfolio-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="mobile">
+                <div class="portfolio-content">
+                    <img src="images/fitness-app.jpg" alt="Application Mobile Fitness" class="lazy-load" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>App Mobile Fitness</h3>
+                        <p>Application Flutter avec backend .NET</p>
+                        <div class="tech-tags">
+                            <span>Flutter</span>
+                            <span>.NET</span>
+                            <span>Firebase</span>
+                        </div>
+                        <a href="#" class="portfolio-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="security">
+                <div class="portfolio-content">
+                    <img src="images/security-system.jpg" alt="Système de Sécurité" class="lazy-load" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Système de Sécurité</h3>
+                        <p>Infrastructure et monitoring de sécurité</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Docker</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="#" class="portfolio-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Notre Adresse</h3>
+                        <p>Sanguera</p>
+                        <p>75000 LOME, TOGO</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>presidentnetero01@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>+228 98 60 00 18</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Votre Nom</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Votre Email</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Votre Message</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Envoyer</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="gradient-text">ALL CODERS</h3>
+                <p>Transformons vos idées en réalité numérique</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ALL CODERS. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html> 
