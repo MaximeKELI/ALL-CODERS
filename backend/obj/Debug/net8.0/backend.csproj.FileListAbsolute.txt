@@ -153,3 +153,8 @@
 /home/maxime/ALL_CODERS/backend/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
 /home/maxime/ALL_CODERS/backend/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
 /home/maxime/ALL_CODERS/backend/obj/Debug/net8.0/backend.csproj.CopyComplete
+/home/maxime/ALL_CODERS/backend/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/maxime/ALL_CODERS/backend/bin/Debug/net8.0/MailKit.dll
+/home/maxime/ALL_CODERS/backend/bin/Debug/net8.0/MimeKit.dll
+/home/maxime/ALL_CODERS/backend/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/maxime/ALL_CODERS/backend/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll

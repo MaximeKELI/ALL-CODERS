@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using MailKit.Net.Smtp;
+using MailKit.Security;
+using MimeKit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +19,9 @@ builder.Services.AddCors(options =>
                 .AllowAnyHeader();
         });
 });
+
+// Add email configuration
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
 // Add SQLite
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -50,15 +56,48 @@ app.MapPost("/api/contact", async (ApplicationDbContext db, [FromBody] ContactMe
     if (string.IsNullOrEmpty(message.Message) || message.Message.Length < 10)
         return Results.BadRequest(new { error = "Le message doit contenir au moins 10 caractères" });
 
-    // Save to database
-    message.CreatedAt = DateTime.UtcNow;
-    db.ContactMessages.Add(message);
-    await db.SaveChangesAsync();
+    try
+    {
+        // Save to database
+        message.CreatedAt = DateTime.UtcNow;
+        db.ContactMessages.Add(message);
+        await db.SaveChangesAsync();
 
-    // Log the message
-    app.Logger.LogInformation($"Message reçu de {message.Name} ({message.Email}): {message.Message}");
+        // Send email
+        var emailMessage = new MimeMessage();
+        emailMessage.From.Add(new MailboxAddress("Contact Form", "noreply@votresite.com"));
+        emailMessage.To.Add(new MailboxAddress("Admin", "presidentnetero01@gmail.com"));
+        emailMessage.Subject = $"Nouveau message de {message.Name}";
+        
+        var bodyBuilder = new BodyBuilder
+        {
+            HtmlBody = $@"
+                <h2>Nouveau message de contact</h2>
+                <p><strong>Nom:</strong> {message.Name}</p>
+                <p><strong>Email:</strong> {message.Email}</p>
+                <p><strong>Message:</strong></p>
+                <p>{message.Message}</p>
+                <p><small>Envoyé le {message.CreatedAt:dd/MM/yyyy HH:mm}</small></p>"
+        };
+        
+        emailMessage.Body = bodyBuilder.ToMessageBody();
 
-    return Results.Ok(new { message = "Message envoyé avec succès!" });
+        using var client = new SmtpClient();
+        await client.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+        await client.AuthenticateAsync("presidentnetero01@gmail.com", app.Configuration["EmailSettings:Password"]);
+        await client.SendAsync(emailMessage);
+        await client.DisconnectAsync(true);
+
+        // Log the message
+        app.Logger.LogInformation($"Message reçu de {message.Name} ({message.Email}): {message.Message}");
+
+        return Results.Ok(new { message = "Message envoyé avec succès!" });
+    }
+    catch (Exception ex)
+    {
+        app.Logger.LogError($"Erreur lors de l'envoi du message: {ex.Message}");
+        return Results.BadRequest(new { error = "Une erreur est survenue lors de l'envoi du message." });
+    }
 });
 
 // Configure port
@@ -83,6 +122,12 @@ public class ContactMessage
     public string Message { get; set; } = string.Empty;
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+}
+
+// Email Settings
+public class EmailSettings
+{
+    public string Password { get; set; } = string.Empty;
 }
 
 // DbContext
