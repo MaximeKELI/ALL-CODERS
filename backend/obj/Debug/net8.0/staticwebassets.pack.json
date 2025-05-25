@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/css/about.css",
+      "PackagePath": "staticwebassets/css/about.css"
+    },
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/css/contact.css",
+      "PackagePath": "staticwebassets/css/contact.css"
+    },
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/css/portfolio.css",
+      "PackagePath": "staticwebassets/css/portfolio.css"
+    },
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/js/about.js",
+      "PackagePath": "staticwebassets/js/about.js"
+    },
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/js/contact.js",
+      "PackagePath": "staticwebassets/js/contact.js"
+    },
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/js/portfolio.js",
+      "PackagePath": "staticwebassets/js/portfolio.js"
+    },
+    {
+      "Id": "/home/maxime/ALL_CODERS/backend/wwwroot/js/script.js",
+      "PackagePath": "staticwebassets/js/script.js"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.backend.props",
+      "PackagePath": "build\\backend.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.backend.props",
+      "PackagePath": "buildMultiTargeting\\backend.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.backend.props",
+      "PackagePath": "buildTransitive\\backend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
