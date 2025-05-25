@@ -23,7 +23,7 @@ Ce projet implémente un système de formulaire de contact moderne avec sauvegar
 
 1. Clonez le projet :
 ```bash
-git clone [URL_DU_PROJET]
+git clone https://github.com/MaximeKELI/ALL-CODERS.git
 cd backend
 ```
 
